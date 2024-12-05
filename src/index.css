@@ -1,3 +1,20 @@
+@font-face {
+  font-family: "Inter";
+  src: local("InterVariable"), url("./assets/fonts/InterVariable.ttf");
+}
+
+:root {
+  font-family: "Inter";
+
+  color-scheme: light dark;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  isolation: isolate;
+}
+
 *,
 *::before,
 *::after {
@@ -8,6 +25,11 @@
 * {
   margin: 0;
 }
+
+html {
+  font-size: 62.5%;
+}
+
 body {
   /* 3. Add accessible line-height */
   line-height: 1.5;
@@ -54,10 +76,4 @@ h4,
 h5,
 h6 {
   text-wrap: balance;
-}
-
-/* Create a root stacking context */
-#root,
-#__next {
-  isolation: isolate;
 }
