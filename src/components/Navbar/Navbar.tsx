@@ -1,6 +1,15 @@
 import { useState } from "react";
 import "./index.css";
 
+const navbarItems: string[] = [
+  "Doctors",
+  "Speakers",
+  "Books",
+  "Courses",
+  "For Employers",
+  "List your practice",
+];
+
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -19,13 +28,15 @@ function Navbar() {
       <ul
         className={`navbar__menu ${isMenuOpen ? "navbar__menu--active" : ""}`}
       >
-        <li className="navbar__item">List your practice</li>
-        <li className="navbar__item">For Employers</li>
-        <li className="navbar__item">Courses</li>
-        <li className="navbar__item">Books</li>
-        <li className="navbar__item">Speakers</li>
-        <li className="navbar__item">Doctors</li>
-        <li className="navbar__item">Home</li>
+        <div className="popover__container">
+          <LoginPopover />
+        </div>
+        {navbarItems.map((item, index) => (
+          <li className="navbar__item" key={index}>
+            <span>{item}</span>
+            <img src="/icons/arrow-right.svg" />
+          </li>
+        ))}
       </ul>
       <div className="navbar__menu-icon" onClick={handleMenu}>
         {!isMenuOpen ? (
@@ -35,6 +46,27 @@ function Navbar() {
         )}
       </div>
     </nav>
+  );
+}
+
+function LoginPopover() {
+  return (
+    <div className="popover">
+      <div className="popover__user">
+        <span className="popover__user-type">Doctor</span>
+        <div className="popover__user-options">
+          <a>Login</a>
+          <a>Sign up</a>
+        </div>
+      </div>
+      <div className="popover__user">
+        <span className="popover__user-type">Patient</span>
+        <div className="popover__user-options">
+          <a>Login</a>
+          <a>Sign up</a>
+        </div>
+      </div>
+    </div>
   );
 }
 
