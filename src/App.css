@@ -1,5 +1,6 @@
 :root {
   --primary-background: rgba(255, 255, 255, 1);
+  --primary-border-color: rgba(234, 234, 234, 1);
   color: rgba(0, 0, 0, 1);
 }
 

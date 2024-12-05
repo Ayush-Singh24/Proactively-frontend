@@ -5,7 +5,7 @@
   align-items: center;
   padding: 1.5rem;
   position: relative;
-  border-bottom: 1px solid rgba(234, 234, 234, 1);
+  border-bottom: 1px solid var(--primary-border-color);
 }
 
 .navbar__logo {
@@ -34,11 +34,31 @@
 .navbar__menu-icon {
   height: 2.4rem;
   width: 2.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .navbar__menu {
   position: absolute;
+  font-size: 1.6rem;
   top: 100%;
   left: 0;
   width: 100%;
+  list-style-type: none;
+  height: 0px;
+  overflow: hidden;
+  transition: height 0.3s ease-in-out;
+}
+
+.navbar__menu--active {
+  height: 100vh;
+}
+
+.navbar__item {
+  padding: 1.2rem 1.8rem;
+  border: 1px solid var(--primary-border-color);
+  &:active {
+    background-color: var(--primary-border-color);
+  }
 }
