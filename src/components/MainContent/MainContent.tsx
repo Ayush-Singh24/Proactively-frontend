@@ -1,4 +1,5 @@
 import FindNow from "../FindNow/FindNow";
+import ImageLoop from "../ImageLoop/ImageLoop";
 import "./index.css";
 function MainContent() {
   return (
@@ -16,7 +17,7 @@ function MainContent() {
         </p>
       </div>
       <FindNow />
-      <div></div>
+      <ImageLoop />
     </section>
   );
 }
