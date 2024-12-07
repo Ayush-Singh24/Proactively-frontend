@@ -18,34 +18,43 @@ function Navbar() {
   };
 
   return (
-    <nav className="navbar">
-      <div className="navbar__logo">
-        <div className="navbar__logo-icon">
-          <img src="/icons/logo.svg" />
+    <div className="navbar__container">
+      <nav className="navbar">
+        <div className="navbar__logo">
+          <div className="navbar__logo-icon">
+            <img src="/icons/logo.svg" />
+          </div>
+          <div className="navbar__logo-text">ProVital</div>
         </div>
-        <div className="navbar__logo-text">ProVital</div>
-      </div>
-      <ul
-        className={`navbar__menu ${isMenuOpen ? "navbar__menu--active" : ""}`}
-      >
-        <div className="popover__container">
-          <LoginPopover />
-        </div>
-        {navbarItems.map((item, index) => (
-          <li className="navbar__item" key={index}>
-            <span>{item}</span>
-            <img src="/icons/arrow-right.svg" />
+        <ul
+          className={`navbar__menu ${isMenuOpen ? "navbar__menu--active" : ""}`}
+        >
+          <div className="popover__container">
+            <LoginPopover />
+          </div>
+          <li className="navbar__item-login">
+            <span>Login/Signup</span>
+            <img src="/icons/chevron-down.svg" />
+            <div className="test">
+              <LoginPopover />
+            </div>
           </li>
-        ))}
-      </ul>
-      <div className="navbar__menu-icon" onClick={handleMenu}>
-        {!isMenuOpen ? (
-          <img src="/icons/hamburger-icon-open.svg" />
-        ) : (
-          <img src="icons/hamburger-icon-close.svg" />
-        )}
-      </div>
-    </nav>
+          {navbarItems.map((item, index) => (
+            <li className="navbar__item" key={index}>
+              <span>{item}</span>
+              <img src="/icons/arrow-right.svg" />
+            </li>
+          ))}
+        </ul>
+        <div className="navbar__menu-icon" onClick={handleMenu}>
+          {!isMenuOpen ? (
+            <img src="/icons/hamburger-icon-open.svg" />
+          ) : (
+            <img src="icons/hamburger-icon-close.svg" />
+          )}
+        </div>
+      </nav>
+    </div>
   );
 }
 
