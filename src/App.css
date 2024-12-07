@@ -5,6 +5,8 @@
   --secondary-text: rgba(112, 112, 112, 1);
   --primary-blue: rgba(70, 131, 208, 1);
   --secondary-blue: rgba(124, 208, 162, 1);
+  --primary-shadow: rgba(0, 0, 0, 0.12);
+  --input-field-color: rgba(249, 250, 251, 1);
   color: var(--primary-text);
 }
 

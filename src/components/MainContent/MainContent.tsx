@@ -1,3 +1,4 @@
+import FindNow from "../FindNow/FindNow";
 import "./index.css";
 function MainContent() {
   return (
@@ -14,7 +15,7 @@ function MainContent() {
           Optimize your lifestyle and reverse chronic diseases.
         </p>
       </div>
-      <div></div>
+      <FindNow />
       <div></div>
     </section>
   );
