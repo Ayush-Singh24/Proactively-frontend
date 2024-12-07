@@ -35,9 +35,7 @@ function Navbar() {
           <li className="navbar__item-login">
             <span>Login/Signup</span>
             <img src="/icons/chevron-down.svg" />
-            <div className="test">
-              <LoginPopover />
-            </div>
+            <LoginPopover />
           </li>
           {navbarItems.map((item, index) => (
             <li className="navbar__item" key={index}>

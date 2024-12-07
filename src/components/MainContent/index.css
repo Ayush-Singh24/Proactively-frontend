@@ -1,0 +1,35 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  padding: 4rem 2rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.content__heading {
+  font-weight: 600;
+  font-size: 2.8rem;
+  text-wrap: wrap;
+}
+
+.content__heading-gradient-text {
+  background-image: linear-gradient(
+    90deg,
+    rgba(17, 115, 179, 1),
+    rgba(12, 185, 179, 1)
+  );
+  background-clip: text;
+  color: transparent;
+}
+
+.content__description {
+  line-height: 2.4rem;
+  text-wrap: stable;
+  font-size: 1.4rem;
+  color: var(--secondary-text);
+}
