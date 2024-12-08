@@ -21,7 +21,7 @@ function ImageLoop() {
           </div>
         ))}
         {images.map((image, index) => (
-          <div className="img__slide" key={index}>
+          <div className="img__slide" key={index * 8}>
             <img src={image} alt={`${image}-${index}`} />
           </div>
         ))}

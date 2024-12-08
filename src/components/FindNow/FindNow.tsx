@@ -21,8 +21,8 @@ const fields = [
 function FindNow() {
   return (
     <div className="form">
-      {fields.map((field) => (
-        <div className="form__input-container">
+      {fields.map((field, index) => (
+        <div className="form__input-container" key={index}>
           <img className="form__input-img" src={field.icon} />
           <input
             type="text"
