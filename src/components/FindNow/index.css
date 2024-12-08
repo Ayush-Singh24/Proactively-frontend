@@ -6,6 +6,7 @@
   border: 1px solid var(--primary-border-color);
   border-radius: 1.4rem;
   box-shadow: 0 4px 3.1rem 0 var(--primary-shadow);
+  background-color: var(--primary-background);
 }
 
 .form__input-container {
@@ -54,4 +55,21 @@
     var(--primary-blue)
   );
   box-shadow: 0 4px 3.1rem 0 var(--primary-shadow);
+}
+
+@media (min-width: 768px) {
+  .form {
+    position: absolute;
+    z-index: 100;
+    flex-direction: row;
+    align-items: center;
+    padding: 1.6rem;
+    gap: 1rem;
+  }
+  .form__button {
+    padding: 2rem 2.8rem;
+  }
+  .form__input {
+    padding: 1.8rem 1.6rem 1.8rem 4rem;
+  }
 }

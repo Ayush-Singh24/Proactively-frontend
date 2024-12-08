@@ -3,8 +3,6 @@
   flex-direction: column;
   gap: 2.4rem;
   padding: 4rem 2rem;
-  max-width: 1280px;
-  margin: 0 auto;
 }
 
 .content {
@@ -34,4 +32,12 @@
   text-wrap: stable;
   font-size: 1.4rem;
   color: var(--secondary-text);
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 1280px;
+    margin: 0 auto;
+    flex-direction: row-reverse;
+  }
 }
