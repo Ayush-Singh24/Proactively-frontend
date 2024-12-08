@@ -39,7 +39,7 @@ function ImageLoop() {
           </div>
         ))}
       </div>
-      <div className="img__slide-vertical-track">
+      <div className="img__slide-vertical-track ttb-animation">
         {verticalImagesCol1.map((image, index) => (
           <div className="img__slide" key={index}>
             <img src={image} alt={`${image}-${index}`} />
@@ -51,7 +51,7 @@ function ImageLoop() {
           </div>
         ))}
       </div>
-      <div className="img__slide-vertical-track">
+      <div className="img__slide-vertical-track btt-animation">
         {verticalImagesCol2.map((image, index) => (
           <div className="img__slide" key={index}>
             <img src={image} alt={`${image}-${index}`} />

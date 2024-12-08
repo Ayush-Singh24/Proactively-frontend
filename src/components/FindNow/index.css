@@ -60,7 +60,7 @@
 @media (min-width: 768px) {
   .form {
     position: absolute;
-    top: 48rem;
+    top: 52rem;
     z-index: 100;
     flex-direction: row;
     align-items: center;
