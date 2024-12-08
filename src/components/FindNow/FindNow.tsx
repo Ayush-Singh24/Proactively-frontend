@@ -3,18 +3,15 @@ import "./index.css";
 const fields = [
   {
     icon: "/icons/search-icon.svg",
-    placeholder:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime perspiciatis ipsa nihil totam, error id dolor. Perspiciatis soluta quisquam cumque sit in qui quasi, itaque maiores consequatur fugit ipsa officiis!",
+    placeholder: "Condition, procedure, speciality",
   },
   {
     icon: "/icons/location-icon.svg",
-    placeholder:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime perspiciatis ipsa nihil totam, error id dolor. Perspiciatis soluta quisquam cumque sit in qui quasi, itaque maiores consequatur fugit ipsa officiis!",
+    placeholder: "City, state, or zipcode",
   },
   {
     icon: "/icons/insurance.svg",
-    placeholder:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime perspiciatis ipsa nihil totam, error id dolor. Perspiciatis soluta quisquam cumque sit in qui quasi, itaque maiores consequatur fugit ipsa officiis!",
+    placeholder: "Insurance carrier",
   },
 ];
 
