@@ -5,6 +5,7 @@
 
 .img__slide-track {
   display: flex;
+  gap: 1.7rem;
   width: calc((19.4rem + 1.7rem) * 16);
   animation: scroll 40s linear infinite;
 }
@@ -14,7 +15,7 @@
     transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(-1 * (19.4rem+1.7rem) * 8));
+    transform: translateX(calc(-1 * (19.4rem + 1.7rem) * 8));
   }
 }
 
