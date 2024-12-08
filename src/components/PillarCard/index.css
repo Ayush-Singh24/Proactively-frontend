@@ -6,7 +6,14 @@
   box-shadow: 0 4px 2.6rem 0 var(--primary-shadow);
   display: flex;
   flex-direction: column;
+  scroll-snap-align: center;
   height: 42rem;
+  transform: scale(0.95);
+  transition: all 0.3s ease;
+}
+
+.pillar__card.active {
+  transform: scale(1);
 }
 
 .pillar__img-container {
@@ -59,9 +66,11 @@
 .pillar__heading {
   font-size: 1.6rem;
   font-weight: 500;
+  margin: 0;
 }
 
 .pillar__description {
   font-size: 1.4rem;
   color: var(--teritory-text);
+  margin: 0;
 }

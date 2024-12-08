@@ -1,27 +1,27 @@
+import { CardType } from "../SixPillars/SixPillars";
 import "./index.css";
-function PillarCard() {
+
+interface PillarCardProps {
+  card: CardType;
+  activeID: number;
+}
+
+function PillarCard({ card, activeID }: PillarCardProps) {
   return (
-    <div className="pillar__card">
+    <div className={`pillar__card ${activeID === card.id ? "active" : ""}`}>
       <div className="pillar__img-container">
-        <img
-          className="pillar__img"
-          src="/images/pillar-1.jpeg"
-          alt="pillar-1"
-        />
+        <img className="pillar__img" src={card.img} alt="pillar-1" />
         <div className="pillar__img-tag">
-          <img className="pillar__img-tag-icon" src="/icons/nutrition.svg" />
+          <img className="pillar__img-tag-icon" src={card.tag.icon} />
           <div className="pillar__img-tag-text">
-            <span>121/80</span>
-            <p>mmHg</p>
+            <span>{card.tag.value}</span>
+            <p>{card.tag.unit}</p>
           </div>
         </div>
       </div>
       <div className="pillar__text">
-        <h3 className="pillar__heading">Nutrition</h3>
-        <p className="pillar__description">
-          Evidence supports the use of a whole food, plant-predominant diet to
-          prevent, treat and reverse chronic illness.
-        </p>
+        <h3 className="pillar__heading">{card.title}</h3>
+        <p className="pillar__description">{card.description}</p>
       </div>
     </div>
   );
