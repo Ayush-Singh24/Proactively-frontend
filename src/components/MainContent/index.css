@@ -52,7 +52,11 @@
     left: 0;
     width: 100%;
     height: 4rem;
-    background: linear-gradient(to right, var(--yello-color), var(--red-color));
+    background: linear-gradient(
+      to right,
+      var(--yellow-color),
+      var(--red-color)
+    );
     transform: skewY(178deg);
   }
 

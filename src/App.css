@@ -3,11 +3,12 @@
   --primary-border-color: rgba(234, 234, 234, 1);
   --primary-text: rgba(0, 0, 0, 1);
   --secondary-text: rgba(112, 112, 112, 1);
+  --teritory-text: rgba(145, 145, 145, 1);
   --primary-blue: rgba(70, 131, 208, 1);
   --secondary-blue: rgba(124, 208, 162, 1);
   --primary-shadow: rgba(0, 0, 0, 0.12);
   --input-field-color: rgba(249, 250, 251, 1);
-  --yello-color: rgba(240, 201, 113, 1);
+  --yellow-color: rgba(240, 201, 113, 1);
   --red-color: rgba(229, 104, 140, 1);
   color: var(--primary-text);
 }
