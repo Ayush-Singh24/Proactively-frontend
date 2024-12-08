@@ -7,6 +7,8 @@
   --secondary-blue: rgba(124, 208, 162, 1);
   --primary-shadow: rgba(0, 0, 0, 0.12);
   --input-field-color: rgba(249, 250, 251, 1);
+  --yello-color: rgba(240, 201, 113, 1);
+  --red-color: rgba(229, 104, 140, 1);
   color: var(--primary-text);
 }
 

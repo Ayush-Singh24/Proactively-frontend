@@ -25,3 +25,36 @@
   border-radius: 10px;
   overflow: hidden;
 }
+
+.img__slide-vertical-track {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .img__slide-track {
+    display: none;
+  }
+
+  .img__slide-vertical-track {
+    display: flex;
+    flex-direction: column;
+    gap: 1.7rem;
+    height: calc(19.4rem * 16);
+    animation: scroll-vertical 40s linear infinite;
+  }
+
+  .img__slide {
+    height: 35.5rem;
+    width: 24.7rem;
+    border-radius: 1.6rem;
+    overflow: hidden;
+  }
+
+  .loop-container {
+    width: 60%;
+    display: flex;
+    gap: 2rem;
+    overflow-y: hidden;
+    padding: 0 2.4rem;
+  }
+}
