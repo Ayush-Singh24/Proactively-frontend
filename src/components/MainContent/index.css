@@ -33,6 +33,19 @@
   font-size: 1.4rem;
   color: var(--secondary-text);
 }
+.container::after {
+  content: "";
+  position: absolute;
+  top: 42rem;
+  left: 0;
+  z-index: -10;
+  width: 100%;
+  max-width: 1980px;
+  margin: 0 auto;
+  height: 4rem;
+  background: linear-gradient(to right, var(--yellow-color), var(--red-color));
+  transform: skewY(178deg);
+}
 
 @media (min-width: 768px) {
   .container {
@@ -48,10 +61,14 @@
   .container::after {
     content: "";
     position: absolute;
+    top: auto;
     bottom: 0;
-    left: 0;
+    /* left: 0;  */
     width: 100%;
+    max-width: 1980px;
+    margin: 0 auto;
     height: 4rem;
+    z-index: 10;
     background: linear-gradient(
       to right,
       var(--yellow-color),

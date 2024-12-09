@@ -69,7 +69,7 @@ const cards: CardType[] = [
     img: "/images/pillar-5.jpeg",
     tag: {
       icon: "/icons/social-connection.svg",
-      value: "feeling",
+      value: "Feeling",
       unit: "better",
     },
     description:
