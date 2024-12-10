@@ -20,6 +20,9 @@
 
 .pillars__heading--gradient {
   font-size: 2rem;
+  font-family: Inter-Italic;
+  letter-spacing: -1px;
+  word-spacing: -5px;
   font-style: italic;
   font-weight: 600;
   background: linear-gradient(to right, var(--red-color), var(--yellow-color));

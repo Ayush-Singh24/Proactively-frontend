@@ -3,6 +3,11 @@
   src: local("InterVariable"), url("./assets/fonts/InterVariable.ttf");
 }
 
+@font-face {
+  font-family: "Inter-Italic";
+  src: local("Inter-Italic"), url("./assets/fonts/Inter-Italice.ttf");
+}
+
 :root {
   font-family: "Inter";
 

@@ -104,7 +104,6 @@ function SixPillars() {
       const newIndex = Math.floor(centerPosition / (cardWidth + 16));
       setActiveID(Math.min(Math.max(0, newIndex), cards.length - 1));
     };
-    console.log(activeID);
 
     container.addEventListener("scroll", handleScroll);
     return () => container.removeEventListener("scroll", handleScroll);
