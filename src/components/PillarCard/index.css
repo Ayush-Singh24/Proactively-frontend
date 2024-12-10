@@ -74,3 +74,10 @@
   color: var(--teritory-text);
   margin: 0;
 }
+
+@media (min-width: 1280px) {
+  .pillar__card {
+    max-width: 50rem;
+    transform: scale(1);
+  }
+}

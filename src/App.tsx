@@ -6,8 +6,10 @@ import SixPillars from "./components/SixPillars/SixPillars";
 function App() {
   return (
     <main className="main-container">
-      <Navbar />
-      <MainContent />
+      <section>
+        <Navbar />
+        <MainContent />
+      </section>
       <SixPillars />
     </main>
   );

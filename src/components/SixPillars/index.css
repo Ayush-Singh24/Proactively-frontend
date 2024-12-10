@@ -44,3 +44,32 @@
   width: 100%;
   padding: 0 0rem 6rem;
 }
+
+@media (min-width: 1280px) {
+  .pillars__container {
+    max-width: 1280px;
+    margin: 0 auto;
+    align-items: start;
+  }
+
+  .pillars__heading {
+    align-items: start;
+    gap: 1rem;
+  }
+
+  .pillars__heading-text {
+    font-size: 1.6rem;
+  }
+
+  .pillars__heading--gradient {
+    font-size: 2.8rem;
+  }
+
+  .pillars__heading-secondary-text {
+    font-size: 2.8rem;
+  }
+
+  .pillars__card-container {
+    gap: 2.3rem;
+  }
+}

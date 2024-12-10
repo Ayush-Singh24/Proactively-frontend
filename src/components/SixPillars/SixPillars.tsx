@@ -99,15 +99,16 @@ function SixPillars() {
 
     const handleScroll = () => {
       const containerWidth = container.offsetWidth;
-      const cardWidth = containerWidth * 0.8;
+      const cardWidth = window.innerWidth >= 768 ? 500 : containerWidth * 0.8;
       const centerPosition = container.scrollLeft + containerWidth / 2;
       const newIndex = Math.floor(centerPosition / (cardWidth + 16));
       setActiveID(Math.min(Math.max(0, newIndex), cards.length - 1));
     };
+    console.log(activeID);
 
     container.addEventListener("scroll", handleScroll);
     return () => container.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [activeID]);
 
   return (
     <section className="pillars__container">

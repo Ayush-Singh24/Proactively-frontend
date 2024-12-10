@@ -57,7 +57,7 @@
   box-shadow: 0 4px 3.1rem 0 var(--primary-shadow);
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1280px) {
   .form {
     position: absolute;
     top: 52rem;

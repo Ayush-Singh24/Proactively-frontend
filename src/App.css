@@ -16,3 +16,15 @@
 body {
   background-color: var(--primary-background);
 }
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+@media (min-width: 1280px) {
+  .main-container {
+    gap: 10rem;
+  }
+}
