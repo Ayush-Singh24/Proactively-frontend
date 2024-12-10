@@ -100,6 +100,7 @@
   border-radius: 8px;
   display: flex;
   flex-direction: column;
+  background-color: var(--primary-background);
 }
 
 .popover__user {
@@ -137,12 +138,16 @@
     width: fit-content;
     justify-self: flex-end;
     color: var(--secondary-text);
+    overflow: visible;
   }
 
   .navbar__item {
     border-bottom: none;
     padding: 0 1.8rem;
     border-right: 2px solid var(--primary-border-color);
+    &:hover {
+      background-color: var(--primary-background);
+    }
   }
 
   .navbar__item-login {
@@ -159,24 +164,44 @@
       transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
     }
     &:hover {
-      background-color: var(--primary-border-color);
       color: var(--primary-blue);
       img {
         transform: rotate(180deg);
         filter: invert(34%) sepia(100%) saturate(500%) hue-rotate(180deg)
           brightness(90%) contrast(90%);
       }
+      .popover {
+        height: 10rem;
+        border: 1px solid var(--primary-border-color);
+      }
     }
+  }
+
+  .popover__user-type {
+    color: var(--primary-text);
   }
 
   .popover {
     width: 21rem;
-    font-size: 1.4rem;
-    height: 8rem;
+    font-size: 1.3rem;
+    height: 0;
     z-index: 10;
-    top: 100%;
-    left: 0;
+    top: calc(100% + 1rem);
+    right: 0;
     position: absolute;
+    cursor: auto;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    border: 1px solid transparent;
+  }
+
+  .popover__user {
+    padding: 0;
+    padding: 1.6rem;
+  }
+
+  .popover__user-options a {
+    cursor: pointer;
   }
 
   .navbar__item img {
