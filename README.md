@@ -24,13 +24,13 @@ yarn install
 
 - To run the development environment use
   `yarn dev`
-- Then visit https://localhost:8001/
+- Then visit https://localhost:8000/
 
 ### Production Environment
 
 - To run the production environment use
   ` yarn preview`
-- Then visit https://localhost:8000/
+- Then visit https://localhost:8001/
 
 # Demo and Screenshots
 
