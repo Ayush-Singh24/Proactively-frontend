@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import PillarCard from "../PillarCard/Pillarcard";
 import "./index.css";
 
@@ -93,11 +93,7 @@ function SixPillars() {
   const containerRef = useRef<HTMLDivElement>(null);
   const [activeID, setActiveID] = useState(0);
 
-  useEffect(() => {
-    console.log(activeID);
-  }, [activeID]);
-
-  const scrollToCard = (step: "next" | "prev") => {
+  const scrollToCard = (step: "next" | "prev" | number) => {
     const container = containerRef.current;
     if (!container) return;
 
@@ -110,6 +106,8 @@ function SixPillars() {
       newActiveID = activeID + 1;
     } else if (step === "prev" && activeID > 0) {
       newActiveID = activeID - 1;
+    } else if (typeof step === "number") {
+      newActiveID = step;
     }
 
     const scrollPosition = newActiveID * (cardWidth + gap);
@@ -137,7 +135,7 @@ function SixPillars() {
     };
 
     const handleWheel = (event: WheelEvent) => {
-      if (window.innerWidth >= 1280) {
+      if (window.innerWidth >= 1280 && event.deltaX !== 0) {
         event.preventDefault();
       }
     };
@@ -182,7 +180,13 @@ function SixPillars() {
       </div>
       <div className="pillars__card-index">
         {cards.map((card) => (
-          <CardIndex key={card.id} title={card.title} activeID={activeID} />
+          <CardIndex
+            key={card.id}
+            id={card.id}
+            title={card.title}
+            activeID={activeID}
+            scrollToCard={scrollToCard}
+          />
         ))}
       </div>
       <div className="pillars__card-container" ref={containerRef}>
@@ -194,9 +198,26 @@ function SixPillars() {
   );
 }
 
-function CardIndex({ title, activeID }: { title: string; activeID: number }) {
+function CardIndex({
+  title,
+  activeID,
+  id,
+  scrollToCard,
+}: {
+  title: string;
+  activeID: number;
+  id: number;
+  scrollToCard: (id: number) => void;
+}) {
+  const changeActiveID = useCallback(() => {
+    scrollToCard(id);
+  }, [id, scrollToCard]);
+
   return (
-    <div className="index">
+    <div
+      className={`index ${activeID === id ? "index--active" : ""}`}
+      onClick={changeActiveID}
+    >
       <span className="index__text">{title}</span>
     </div>
   );

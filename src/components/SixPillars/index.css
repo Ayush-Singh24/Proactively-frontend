@@ -62,12 +62,14 @@
     max-width: 1280px;
     margin: 0 auto;
     align-items: start;
+    padding: 0 2rem;
   }
 
   .pillars__heading {
     align-items: start;
     gap: 1rem;
     width: 100%;
+    margin: 0;
   }
 
   .pillars__heading-text {
@@ -119,6 +121,7 @@
 
   .pillars__card-container {
     gap: 2.3rem;
+    padding-top: 2rem;
   }
 
   .index {
@@ -126,11 +129,30 @@
     background-color: var(--primary-background);
     border: 0.8px solid var(--primary-border-color);
     padding: 0.5rem 1.7rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    &:hover {
+      background-color: var(--primary-border-color);
+    }
+    &:active {
+      scale: 0.95;
+    }
   }
 
   .index__text {
     font-size: 1.6rem;
     font-weight: 500;
     color: var(--secondary-text);
+    transition: text 0.3s ease;
+  }
+
+  .index--active {
+    background-color: var(--primary-text);
+    .index__text {
+      color: var(--primary-background);
+    }
+    &:hover {
+      background-color: var(--primary-text);
+    }
   }
 }
