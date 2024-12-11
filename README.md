@@ -18,6 +18,8 @@ git clone https://github.com/ayush-singh24/proactively-frontend
 cd proactively-frontend
 
 npm install / yarn install
+
+npm run dev / yarn dev
 ```
 
 ### Development Environment
