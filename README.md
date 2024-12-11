@@ -17,19 +17,19 @@ git clone https://github.com/ayush-singh24/proactively-frontend
 
 cd proactively-frontend
 
-yarn install
+npm install / yarn install
 ```
 
 ### Development Environment
 
 - To run the development environment use
-  `yarn dev`
+  `npm run dev` / `yarn dev`
 - Then visit https://localhost:8000/
 
 ### Production Environment
 
 - To run the production environment use
-  ` yarn preview`
+  `npm run preview` / `yarn preview`
 - Then visit https://localhost:8001/
 
 # Demo and Screenshots
