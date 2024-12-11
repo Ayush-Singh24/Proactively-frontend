@@ -1,50 +1,37 @@
-# React + TypeScript + Vite
+# Deployment
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is deployed on Vercel. The live site can be accessed at https://proactively-frontend.vercel.app
 
-Currently, two official plugins are available:
+# Technologies Used
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- React.js + Vite
+- Typescript
+- CSS
 
-## Expanding the ESLint configuration
+# How to Run?
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Use the following commands in your terminal:
 
-- Configure the top-level `parserOptions` property like this:
+```
+git clone https://github.com/ayush-singh24/proactively-frontend
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+cd proactively-frontend
+
+yarn install
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+- To run the development environment use
+  `yarn dev`
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+- To run the production environment use
+  ` yarn start`
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+# Demo and Screenshots
+
+## Desktop View
+
+![desktop view](./screenshots/desktop-view.jpeg)
+
+## Mobile View
+
+![desktop view](./screenshots/mobile-view.jpeg)
