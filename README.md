@@ -34,4 +34,10 @@ yarn install
 
 ## Mobile View
 
+### Homescreen
+
 ![desktop view](./screenshots/mobile-view.jpeg)
+
+### Hamburger menu
+
+![desktop view](./screenshots/mobile-view2.jpeg)
