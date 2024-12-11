@@ -2,13 +2,13 @@
   display: flex;
   flex-direction: column;
   gap: 2.4rem;
-  padding: 4rem 2rem;
 }
 
 .content {
   display: flex;
   flex-direction: column;
   gap: 1.6rem;
+  margin: 4rem 2rem 0;
 }
 
 .content__heading {
@@ -80,6 +80,7 @@
   .content {
     justify-content: center;
     height: 70%;
+    margin: 0;
   }
 
   .content__heading {

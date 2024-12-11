@@ -94,33 +94,96 @@ function SixPillars() {
   const [activeID, setActiveID] = useState(0);
 
   useEffect(() => {
+    console.log(activeID);
+  }, [activeID]);
+
+  const scrollToCard = (step: "next" | "prev") => {
+    const container = containerRef.current;
+    if (!container) return;
+
+    const cardWidth =
+      window.innerWidth >= 1280 ? 400 : container.offsetWidth * 0.8;
+    const gap = 23;
+
+    let newActiveID = activeID;
+    if (step === "next" && activeID < cards.length - 1) {
+      newActiveID = activeID + 1;
+    } else if (step === "prev" && activeID > 0) {
+      newActiveID = activeID - 1;
+    }
+
+    const scrollPosition = newActiveID * (cardWidth + gap);
+
+    container.scrollTo({
+      left: scrollPosition,
+      behavior: "smooth",
+    });
+
+    setActiveID(newActiveID);
+  };
+
+  useEffect(() => {
     const container = containerRef.current;
     if (!container) return;
 
     const handleScroll = () => {
+      if (window.innerWidth >= 1280) return;
       const containerWidth = container.offsetWidth;
-      const cardWidth = window.innerWidth >= 768 ? 500 : containerWidth * 0.8;
+      const cardWidth =
+        window.innerWidth >= 1280 ? 500 : container.offsetWidth * 0.8;
       const centerPosition = container.scrollLeft + containerWidth / 2;
       const newIndex = Math.floor(centerPosition / (cardWidth + 16));
       setActiveID(Math.min(Math.max(0, newIndex), cards.length - 1));
     };
 
+    const handleWheel = (event: WheelEvent) => {
+      if (window.innerWidth >= 1280) {
+        event.preventDefault();
+      }
+    };
+
     container.addEventListener("scroll", handleScroll);
-    return () => container.removeEventListener("scroll", handleScroll);
-  }, [activeID]);
+    container.addEventListener("wheel", handleWheel, { passive: false });
+
+    return () => {
+      container.removeEventListener("scroll", handleScroll);
+      container.removeEventListener("wheel", handleWheel);
+    };
+  }, []);
 
   return (
     <section className="pillars__container">
       <div className="pillars__heading">
         <h2 className="pillars__heading-text">HOW IT WORKS</h2>
-        <div className="pillars__heading-style">
-          <span className="pillars__heading--gradient">
-            Lifestyle as medicine:
-          </span>
-          <span className="pillars__heading-secondary-text">
-            The six pillars
-          </span>
+        <div className="pillars__heading-wrapper">
+          <div className="pillars__heading-style">
+            <span className="pillars__heading--gradient">
+              Lifestyle as medicine:
+            </span>
+            <span className="pillars__heading-secondary-text">
+              The six pillars
+            </span>
+          </div>
+          <div className="pillars__card-buttons">
+            <button
+              onClick={() => scrollToCard("prev")}
+              disabled={activeID === 0}
+            >
+              <img src="/icons/arrow-btn-left.svg" />
+            </button>
+            <button
+              onClick={() => scrollToCard("next")}
+              disabled={activeID === cards.length - 1}
+            >
+              <img src="/icons/arrow-btn-right.svg" />
+            </button>
+          </div>
         </div>
+      </div>
+      <div className="pillars__card-index">
+        {cards.map((card) => (
+          <CardIndex key={card.id} title={card.title} activeID={activeID} />
+        ))}
       </div>
       <div className="pillars__card-container" ref={containerRef}>
         {cards.map((card) => (
@@ -128,6 +191,14 @@ function SixPillars() {
         ))}
       </div>
     </section>
+  );
+}
+
+function CardIndex({ title, activeID }: { title: string; activeID: number }) {
+  return (
+    <div className="index">
+      <span className="index__text">{title}</span>
+    </div>
   );
 }
 

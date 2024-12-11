@@ -1,6 +1,7 @@
 :root {
   --primary-background: rgba(255, 255, 255, 1);
   --primary-border-color: rgba(234, 234, 234, 1);
+  --secondary-border-color: rgba(198, 198, 198, 1);
   --primary-text: rgba(0, 0, 0, 1);
   --secondary-text: rgba(112, 112, 112, 1);
   --teritory-text: rgba(145, 145, 145, 1);
