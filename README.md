@@ -20,11 +20,17 @@ cd proactively-frontend
 yarn install
 ```
 
+### Development Environment
+
 - To run the development environment use
   `yarn dev`
+- Then visit https://localhost:8001/
+
+### Production Environment
 
 - To run the production environment use
-  ` yarn start`
+  ` yarn preview`
+- Then visit https://localhost:8000/
 
 # Demo and Screenshots
 
