@@ -18,6 +18,8 @@ function MainContent() {
       </div>
       <FindNow />
       <ImageLoop />
+      <div className="shadow-box-1" />
+      <div className="shadow-box-2" />
     </section>
   );
 }

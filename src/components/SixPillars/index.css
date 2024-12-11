@@ -57,12 +57,17 @@
   display: none;
 }
 
+.shadow-box-3 {
+  display: none;
+}
+
 @media (min-width: 1280px) {
   .pillars__container {
     max-width: 1280px;
     margin: 0 auto;
     align-items: start;
     padding: 0 2rem;
+    position: relative;
   }
 
   .pillars__heading {
@@ -154,5 +159,18 @@
     &:hover {
       background-color: var(--primary-text);
     }
+  }
+
+  .shadow-box-3 {
+    display: block;
+    position: absolute;
+    height: 25rem;
+    width: 25rem;
+    border-radius: 50%;
+    background-color: var(--teritory-shadow);
+    filter: blur(10rem);
+    top: -10rem;
+    right: 0;
+    z-index: -1;
   }
 }

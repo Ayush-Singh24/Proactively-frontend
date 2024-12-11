@@ -151,6 +151,7 @@ function SixPillars() {
 
   return (
     <section className="pillars__container">
+      <div className="shadow-box-3" />
       <div className="pillars__heading">
         <h2 className="pillars__heading-text">HOW IT WORKS</h2>
         <div className="pillars__heading-wrapper">

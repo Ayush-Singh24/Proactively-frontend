@@ -1,5 +1,6 @@
 .loop-container {
   display: grid;
+  overflow: hidden;
 }
 
 .img__slide-track {

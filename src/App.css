@@ -8,6 +8,8 @@
   --primary-blue: rgba(70, 131, 208, 1);
   --secondary-blue: rgba(124, 208, 162, 1);
   --primary-shadow: rgba(0, 0, 0, 0.12);
+  --secondary-shadow: rgba(251, 241, 220, 0.96);
+  --teritory-shadow: rgba(207, 225, 240, 0.44);
   --input-field-color: rgba(249, 250, 251, 1);
   --yellow-color: rgba(240, 201, 113, 1);
   --red-color: rgba(229, 104, 140, 1);

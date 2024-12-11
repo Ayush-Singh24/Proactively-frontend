@@ -50,19 +50,24 @@
   align-items: center;
   border: none;
   border-radius: 8px;
+  cursor: pointer;
   background-image: linear-gradient(
     to right,
     var(--secondary-blue),
     var(--primary-blue)
   );
   box-shadow: 0 4px 3.1rem 0 var(--primary-shadow);
+  transition: transform 0.3s ease-in-out;
+  &:active {
+    transform: scale(0.95);
+  }
 }
 
 @media (min-width: 1280px) {
   .form {
     position: absolute;
-    top: 52rem;
-    z-index: 100;
+    top: calc(50% + 8rem);
+    z-index: 10;
     flex-direction: row;
     align-items: center;
     padding: 1.6rem;
